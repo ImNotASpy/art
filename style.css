@@ -115,6 +115,140 @@ body {
   opacity: 0.55;
 }
 
+.note-block {
+  border: 1.5px solid #d38aa7; /* same pink family as nav */
+  border-radius: 14px;
+
+  padding: 16px 18px;
+  margin: 22px 0;
+
+  max-width: 720px;
+
+  background: rgba(255, 255, 255, 0.015); /* almost invisible */
+}
+
+.note-block p {
+  margin: 0 0 8px 0;
+  line-height: 1.8;
+}
+
+.note-block a {
+  font-size: 1rem;
+}
+
+.note-block .date {
+  font-size: 0.75rem;
+  opacity: 0.6;
+}
+
+.note-block:hover {
+  border-color: #ffb6d9;
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+}
+
+/* =========================
+  Quotes
+========================= */
+
+.quote-text {
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.quote-author {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+.long-quote .quote-text {
+  font-style: italic;
+  line-height: 1.9;
+  font-size: 0.95rem;
+}
+
+.long-quote {
+  padding-top: 28px;
+  padding-bottom: 28px;
+}
+
+/* =========================
+   Collected
+========================= */
+
+.note-block {
+  border: 1px solid #ff9acb;
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin-bottom: 32px;
+  background: rgba(255, 154, 203, 0.04);
+}
+
+/* External link title */
+.external-link {
+  display: inline-block;
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  margin-bottom: 8px;
+  color: inherit;
+}
+
+/* Link icon */
+.external-link::before {
+  content: "↗";
+  margin-right: 8px;
+  opacity: 0.6;
+}
+
+/* Description text */
+.reference-note {
+  margin: 12px 0;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+/* Date */
+.note-block .date {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+/* Hover (soft, not loud) */
+.note-block:hover {
+  border-color: #ff6fae;
+  transform: translateY(-2px);
+  transition: 0.2s ease;
+}
+
+/* =========================
+   Collected Link Icons
+========================= */
+
+.external-link {
+  display: inline-block;
+  font-size: 1.05rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Video (YouTube) */
+.external-link.video::before {
+  content: "▶";
+  margin-right: 8px;
+  opacity: 0.65;
+  font-size: 0.85rem;
+}
+
+/* Story / written work */
+.external-link.story::before {
+  content: "📖";
+  margin-right: 8px;
+  opacity: 0.65;
+  font-size: 0.85rem;
+}
 
 /* =========================
   Headings
@@ -260,20 +394,6 @@ a:visited {
 /* Hover effect */
 .dropdown-nav a:hover {
   color: #f2a3c7;
-}
-
-
-
-/* =========================
-  Blockquotes
-========================= */
-
-blockquote {
-  margin: 2em 0;
-  padding-left: 1em;
-  border-left: 4px solid #777;
-  color: #d0d0d0;
-  font-style: italic;
 }
 
 /* =========================
