@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
 
 /* =========================
-  Base
+   Base
 ========================= */
 
 html {
@@ -19,7 +19,7 @@ body {
 }
 
 /* =========================
-  Headings
+   Headings
 ========================= */
 
 h1 {
@@ -35,7 +35,7 @@ h2 {
 }
 
 /* =========================
-  Text
+   Text
 ========================= */
 
 p {
@@ -64,7 +64,7 @@ p {
 }
 
 /* =========================
-  Links
+   Links
 ========================= */
 
 a {
@@ -93,7 +93,7 @@ a:visited {
 }
 
 /* =========================
-  Navigation
+   Navigation
 ========================= */
 
 .menu-wrapper {
@@ -153,7 +153,7 @@ a:visited {
 }
 
 /* =========================
-  Individual Work Pages
+   Individual Work Pages
 ========================= */
 
 .work-wrap {
@@ -201,7 +201,7 @@ a:visited {
 }
 
 /* =========================
-  Notes
+   Notes
 ========================= */
 
 .notes-list {
@@ -226,7 +226,7 @@ a:visited {
 
 .note-fragment {
   max-width: 640px;
-  margin: 0 0 36px 0;
+  margin: 0 0 36px;
 }
 
 .note-fragment p {
@@ -240,37 +240,44 @@ a:visited {
   opacity: 0.55;
 }
 
-.note-block {
-  border: 1.5px solid #d38aa7;
-  border-radius: 14px;
-  padding: 16px 18px;
-  margin: 22px 0;
-  max-width: 720px;
-  background: rgba(255, 255, 255, 0.015);
-  transition: 0.2s ease;
+/* Note cards and collected cards share the same base card look */
+.note-block,
+.collected-block {
+  border: 1px solid #ff9acb;
+  border-radius: 12px;
+  padding: 20px 22px;
+  margin: 22px 0 32px 0;
+  background: rgba(255, 154, 203, 0.04);
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-.note-block p {
-  margin: 0 0 8px 0;
-  line-height: 1.8;
-}
-
-.note-block a {
-  font-size: 1rem;
-}
-
-.note-block .date {
-  font-size: 0.75rem;
-  opacity: 0.6;
-}
-
-.note-block:hover {
-  border-color: #ffb6d9;
+.note-block:hover,
+.collected-block:hover {
+  border-color: #ff6fae;
   transform: translateY(-2px);
 }
 
+.note-block p,
+.collected-block p {
+  margin: 0 0 8px;
+  line-height: 1.8;
+}
+
+.note-block a,
+.collected-block a {
+  font-size: 1rem;
+}
+
+.note-block .date,
+.collected-block .date {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
 /* =========================
-  Quotes
+   Quotes
 ========================= */
 
 .quote-text {
@@ -291,33 +298,13 @@ a:visited {
 }
 
 .long-quote .quote-text {
-  font-style: italic;
   line-height: 1.9;
   font-size: 0.95rem;
 }
 
 /* =========================
-  Collected
+   Collected
 ========================= */
-
-.collected-block {
-  border: 1px solid #ff9acb;
-  border-radius: 10px;
-  padding: 20px 22px;
-  margin-bottom: 32px;
-  background: rgba(255, 154, 203, 0.04);
-  transition: 0.2s ease;
-}
-
-.collected-block:hover {
-  border-color: #ff6fae;
-  transform: translateY(-2px);
-}
-
-.collected-block .date {
-  font-size: 0.8rem;
-  opacity: 0.6;
-}
 
 .external-link {
   display: inline-block;
@@ -325,6 +312,23 @@ a:visited {
   text-decoration: none;
   color: inherit;
   margin-bottom: 8px;
+}
+
+.external-link::before {
+  margin-right: 8px;
+  opacity: 0.65;
+}
+
+.external-link.video::before {
+  content: "▶";
+}
+
+.external-link.story::before {
+  content: "📖";
+}
+
+.external-link.book::before {
+  content: "↗";
 }
 
 .reference-note {
@@ -342,28 +346,8 @@ a:visited {
   border-radius: 8px;
 }
 
-/* Collected link icons */
-
-.external-link::before {
-  margin-right: 8px;
-  opacity: 0.65;
-  font-size: 0.85rem;
-}
-
-.external-link.video::before {
-  content: "▶";
-}
-
-.external-link.story::before {
-  content: "📖";
-}
-
-.external-link.book::before {
-  content: "📚";
-}
-
 /* =========================
-  Footer
+   Footer
 ========================= */
 
 footer {

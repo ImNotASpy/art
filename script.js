@@ -3,12 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const menu = document.querySelector('.dropdown-nav');
 
   if (!button || !menu) {
-    console.log('Menu elements not found');
     return;
   }
 
   button.addEventListener('click', () => {
     menu.classList.toggle('open');
-    console.log('Menu toggled');
   });
 });
